@@ -1,0 +1,20 @@
+{
+  "name": "Harmonia",
+  "version": "0.1",
+  "description": "rpa tool",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/",
+        "https://*/"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+    "action": {
+    "default_popup": "popup.html"
+  }
+}
