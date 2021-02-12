@@ -1,10 +1,13 @@
 console.log('Harmonia');
 
-document.body.addEventListener("click", function () {
+document.addEventListener("click", function () {
   let element = event.target;
+  let xpath = getXpath(element);
   console.log('Hrmonia Log', location.href);
-  console.log('Hrmonia Log', element);
-  console.log('Hrmonia log', getXpath(element));
+  console.log('Hrmonia log', xpath);
+
+  // var result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+  // result.singleNodeValue.click();
 });
 
 // ref: https://qiita.com/narikei/items/fb62b543ca386fcee211
